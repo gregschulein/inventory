@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body class="edit-page">
+	<a href="/" class="header">Inventory</a>
+
+	<div class="title">Edit item</div>
+
+	<div class="edit-form">
+		<form id="save" action="/edit" method="post">
+			<input type="hidden" name="id" value="<%=id%>">
+			<div class="edit-form-field">
+				<label for="description">Description:</label>
+				<input type="text" name="description" value="<%=description%>" autofocus>
+			</div>
+			<div class="edit-form-field">
+				<label for="location">Location:</label>
+				<input type="text" name="location" value="<%=location%>">
+			</div>
+			<div class="edit-form-field">
+				<label for="keywords">Keywords:</label>
+				<input type="text" name="keywords" value="<%=keywords%>">
+			</div>
+		</form>
+		<form id="delete" action="/delete" method="post">
+			<input type="hidden" name="id" value="<%=id%>">
+		</form>
+	</div>
+	<div class="edit-buttons">
+		<div class="edit-form-save-button">
+			<button type="submit" form="save">Save</button>
+		</div>
+		<div class="edit-form-delete-button">
+			<button type="submit" form="delete">Delete Item</button>
+		</div>
+	</div>
+</body>
+</html>

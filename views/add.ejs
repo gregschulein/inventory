@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body class="add-page">
+	<a href="/" class="header">Inventory</a>
+
+	<div class="title">Add item</div>
+
+	<div class="add-form">
+		<form action="/add" method="post">
+			<div class="add-form-field">
+				<label for="description">Description:</label>
+				<input type="text" name="description" autofocus>
+			</div>
+			<div class="add-form-field">
+				<label for="location">Location:</label>
+				<input type="text" name="location">
+			</div>
+			<div class="add-form-field">
+				<label for="keywords">Keywords:</label>
+				<input type="text" name="keywords">
+			</div>
+			<div class="add-form-button">
+				<button type="submit">Save</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

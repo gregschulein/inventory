@@ -1,0 +1,50 @@
+/* General */
+body { font-family: arial, sans-serif; }
+
+/* Utility Classes */
+.btn, .header, .add-form-button button, .edit-form-save-button button, .edit-form-delete-button button, .search-field button, .add-button a {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px 15px;
+    background-color: black;
+}
+
+/* Specific overrides for utility classes */
+.header { font-size: 32px; font-weight: bold; padding: 15px 32px; width: 100%; box-sizing: border-box; }
+.edit-form-delete-button button { background-color: darkred; }
+.add-button a { width: 40px; padding: 10px; font-size: 32px; font-weight: bold; }
+
+/* Forms & Inputs */
+.add-form, .edit-form { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 0 auto; }
+.add-form-field, .edit-form-field { display: flex; align-items: center; padding-top: 10px; }
+.add-form-field::after, .edit-form-field::after { content: ""; width: 140px; }
+.add-form-field label, .edit-form-field label { font-size: 24px; width: 125px; text-align: left; margin-right: 15px; }
+.add-form-field input, .edit-form-field input { border-radius: 10px; font-size: 24px; padding: 5px; width: 500px; }
+
+/* Layout & Typography */
+.title { display: flex; font-size: 24px; font-weight: bold; justify-content: center; padding: 50px 0px 30px; }
+.add-form-button, .search-field { display: flex; justify-content: center; padding-top: 25px; }
+.search-field { margin-top: 150px; }
+.search-page .search-field { margin-top: 25px; }
+.search-field input { border-radius: 10px; font-size: 24px; }
+.edit-buttons { display: flex; justify-content: space-between; width: 510px; margin: 25px auto 0px auto; }
+.nothing-found { margin-top: 150px; }
+.nothing-found p { text-align: center; font-style: italic; }
+
+/* Tables & Results */
+.search-results { margin-top: 25px; }
+.search-results table { border-collapse: collapse; width: 100%; }
+.search-results tr:nth-child(odd) { background-color: #dddddd; }
+.search-results td { padding: 8px; }
+.search-results td.description { text-align: left; width: 70%; }
+.search-results td.location { text-align: right; }
+.search-results a { color: black; text-decoration: none; font-size: 24px; }
+
+/* Positioning */
+.add-button { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }

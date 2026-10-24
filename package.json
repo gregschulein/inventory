@@ -1,0 +1,14 @@
+{
+  "name": "inventory",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Simple inventory tracking system",
+  "author": "Greg Schulein",
+  "main": "./app.js",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "lowdb": "^3.0.0"
+  }
+}

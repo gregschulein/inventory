@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inventory</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body class="search-page">
+	<a href="/" class="header">Inventory</a>
+
+	<div class="search-field">
+		<form action="/search" method="get">
+			<input type="search" name="q" value="<%=terms%>" autofocus>
+			<button type="submit">Search</button>
+		</form>
+	</div>
+
+	<% if(items.length === 0) { %>
+
+	<div class="nothing-found">
+		<p>No matching items found</p>
+	</div>
+
+	<% } else { %>
+
+	<div class="search-results">
+		<table>
+			<% items.forEach((item) => { %>
+			<tr>
+			<td class="description">
+				<a href="/edit?id=<%=item.id%>">
+					<%= item.description %>
+				</a>
+			</td>
+			<td class="location">
+				<a href="/search?q=<%=item.location%>">
+					<%= item.location %>
+				</a>
+			</td>
+			</tr>
+			<% }) %>
+		</table>
+	</div>
+
+	<% } %>
+
+	<div class="add-button">
+		<a href="/add">+</a>
+	</div>
+</body>
+</html>
