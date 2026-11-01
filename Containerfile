@@ -6,13 +6,12 @@ RUN mkdir /home/node/app
 
 WORKDIR /home/node/app
 
-COPY --exclude=Containerfile \
-     --exclude=Makefile \
-     --exclude=LICENSE \
-     --exclude=README.md \
-     . .
-
+COPY package.json ./
 RUN npm install
+
+COPY app.js ./
+COPY static/ ./static/
+COPY views/ ./views/
 
 RUN mkdir data
 
